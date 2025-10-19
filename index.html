@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valida - Dados</title>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Validador de Dados</h1>
+
+      <div class="container">
+        <div id="cpf">
+          <label for="dado">Informe o CPF: </label>
+          <input type="text" id="dadosCpf" />
+          <button id="btnValidarCpf">Validar CPF</button>
+          <br />
+          <label>Resultado da validação: <span id="resultadoCpf"></span></label>
+          <br />
+          <label>Erros: <span id="erroCpf"></span></label>
+        </div>
+
+        <div id="geradorCPF">
+          <button id="btnGerarCpf">Gerar CPF</button>
+          <label for="cpfGerado">CPF: </label>
+        </div>
+      </div>
+
+      <div class="container">
+        <div id="cnpj">
+          <label for="dado">Informe o CNPJ: </label>
+          <input type="text" id="dadosCnpj" />
+          <button id="btnValidarCnpj">Validar CNPJ</button>
+          <br />
+          <label
+            >Resultado da validação: <span id="resultadoCnpj"></span
+          ></label>
+          <br />
+          <label>Erros: <span id="erroCnpj"></span></label>
+        </div>
+
+        <div id="geradorCNPJ">
+          <button id="btnGerarCnpj">Gerar CNPJ</button>
+          <label for="cnpjGerado">CNPJ: </label>
+        </div>
+      </div>
+
+      <div class="container">
+        <div id="novoCNPJ">
+          <label for="dado">Informe o Novo CNPJ: </label>
+          <input type="text" id="dadosNovoCnpj" />
+          <button id="btnValidarNovoCnpj">Validar Novo CNPJ</button>
+          <br />
+          <label
+            >Resultado da validação: <span id="resultadoNovoCnpj"></span
+          ></label>
+          <br />
+          <label>Erros: <span id="erroNovoCnpj"></span></label>
+        </div>
+
+        <div id="geradorNovoCNPJ">
+          <button id="btnGerarNovoCnpj">Gerar Novo CNPJ</button>
+          <label for="novoCnpjGerado">Novo CNPJ: </label>
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js" defer></script>
+  </body>
+</html>
