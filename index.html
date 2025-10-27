@@ -12,7 +12,7 @@
       <div class="container">
         <div id="cpf">
           <label for="dado">Informe o CPF: </label>
-          <input type="text" id="dadosCpf" />
+          <input type="text" id="dadosCpf" inputmode="numeric" maxlength="14" />
           <button id="btnValidarCpf">Validar CPF</button>
           <br />
           <label>Resultado da validação: <span id="resultadoCpf"></span></label>
@@ -25,7 +25,7 @@
           <label for="cpfGerado">CPF: </label>
         </div>
       </div>
-
+      <hr />
       <div class="container">
         <div id="cnpj">
           <label for="dado">Informe o CNPJ: </label>
@@ -44,7 +44,7 @@
           <label for="cnpjGerado">CNPJ: </label>
         </div>
       </div>
-
+      <hr />
       <div class="container">
         <div id="novoCNPJ">
           <label for="dado">Informe o Novo CNPJ: </label>
@@ -63,6 +63,7 @@
           <label for="novoCnpjGerado">Novo CNPJ: </label>
         </div>
       </div>
+      <hr />
     </div>
     <script src="./js/main.js" defer></script>
   </body>
