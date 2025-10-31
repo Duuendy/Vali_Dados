@@ -1,4 +1,4 @@
-import { validaCPF } from "./cpf.js";
+import { validaCPF, gerarCpf } from "./cpf.js";
 import { validaCNPJ } from "./cnpj.js";
 import { validaNovoCNPJ } from "./novo_cnpj.js";
 import {
@@ -45,6 +45,7 @@ setupValidador({
   erroId: "erroCpf",
   normalizaDado: (x) => x,
   validador: validaCPF,
+  cpfId: "cpfGerado",
 });
 
 //CNPJ
@@ -65,4 +66,11 @@ setupValidador({
   erroId: "erroNovoCnpj",
   normalizaDado: (x) => x,
   validador: validaNovoCNPJ,
+});
+
+document.getElementById("btnGerarCpf")?.addEventListener("click", () => {
+  // console.log("Gerar CPF - funcionalidade não implementada");
+  const novoCpf = gerarCpf();
+  document.getElementById("cpfGerado").textContent = novoCpf;
+  console.log(novoCpf);
 });
