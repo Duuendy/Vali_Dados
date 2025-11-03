@@ -1,5 +1,5 @@
 import { validaCPF, gerarCpf } from "./cpf.js";
-import { validaCNPJ } from "./cnpj.js";
+import { validaCNPJ, gerarCnpj } from "./cnpj.js";
 import { validaNovoCNPJ } from "./novo_cnpj.js";
 import {
   mascaraCPF,
@@ -16,24 +16,18 @@ document.addEventListener("DOMContentLoaded", () => {
     $cpf.addEventListener("input", (e) => {
       e.target.value = mascaraCPF(e.target.value);
     });
-
-    validador: validaCPF;
   }
 
   if ($cnpj) {
     $cnpj.addEventListener("input", (e) => {
       e.target.value = mascaraCNPJ(e.target.value);
     });
-
-    validador: validaCNPJ;
   }
 
   if ($novoCnpj) {
     $novoCnpj.addEventListener("input", (e) => {
       e.target.value = mascaraNovoCNPJ(e.target.value);
     });
-
-    validador: validaNovoCNPJ;
   }
 });
 
@@ -56,6 +50,7 @@ setupValidador({
   erroId: "erroCnpj",
   normalizaDado: (x) => x,
   validador: validaCNPJ,
+  cnpjId: "cnpjGerado",
 });
 
 //Novo CNPJ
@@ -73,4 +68,11 @@ document.getElementById("btnGerarCpf")?.addEventListener("click", () => {
   const novoCpf = gerarCpf();
   document.getElementById("cpfGerado").textContent = novoCpf;
   console.log(novoCpf);
+});
+
+document.getElementById("btnGerarCnpj")?.addEventListener("click", () => {
+  // console.log("Gerar CNPJ - funcionalidade não implementada");
+  const novoCnpj = gerarCnpj();
+  document.getElementById("cnpjGerado").textContent = novoCnpj;
+  console.log(novoCnpj);
 });

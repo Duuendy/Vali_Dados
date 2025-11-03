@@ -29,7 +29,12 @@
       <div class="container">
         <div id="cnpj">
           <label for="dado">Informe o CNPJ: </label>
-          <input type="text" id="dadosCnpj" />
+          <input
+            type="text"
+            id="dadosCnpj"
+            inputmode="numeric"
+            maxlength="18"
+          />
           <button id="btnValidarCnpj">Validar CNPJ</button>
           <br />
           <label
@@ -41,7 +46,7 @@
 
         <div id="geradorCNPJ">
           <button id="btnGerarCnpj">Gerar CNPJ</button>
-          <label for="cnpjGerado">CNPJ: </label>
+          <label>CNPJ: <span id="cnpjGerado"></span></label>
         </div>
       </div>
       <hr />
