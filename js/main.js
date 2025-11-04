@@ -1,6 +1,6 @@
 import { validaCPF, gerarCpf } from "./cpf.js";
 import { validaCNPJ, gerarCnpj } from "./cnpj.js";
-import { validaNovoCNPJ } from "./novo_cnpj.js";
+import { validaNovoCNPJ, gerarNovoCnpj } from "./novo_cnpj.js";
 import {
   mascaraCPF,
   mascaraCNPJ,
@@ -75,4 +75,11 @@ document.getElementById("btnGerarCnpj")?.addEventListener("click", () => {
   const novoCnpj = gerarCnpj();
   document.getElementById("cnpjGerado").textContent = novoCnpj;
   console.log(novoCnpj);
+});
+
+document.getElementById("btnGerarNovoCnpj")?.addEventListener("click", () => {
+  // console.log("Gerar Novo CNPJ - funcionalidade não implementada");
+  const novoCnpjNovo = gerarNovoCnpj();
+  document.getElementById("novoCnpjGerado").textContent = novoCnpjNovo;
+  console.log(novoCnpjNovo);
 });
