@@ -37,6 +37,7 @@ setupValidador({
   inputId: "dadosCpf",
   resultadoId: "resultadoCpf",
   erroId: "erroCpf",
+  lblErroId: "lblErroCpf",
   normalizaDado: (x) => x,
   validador: validaCPF,
   cpfId: "cpfGerado",
@@ -48,6 +49,7 @@ setupValidador({
   inputId: "dadosCnpj",
   resultadoId: "resultadoCnpj",
   erroId: "erroCnpj",
+  lblErroId: "lblErroCnpj",
   normalizaDado: (x) => x,
   validador: validaCNPJ,
   cnpjId: "cnpjGerado",
@@ -59,6 +61,7 @@ setupValidador({
   inputId: "dadosNovoCnpj",
   resultadoId: "resultadoNovoCnpj",
   erroId: "erroNovoCnpj",
+  lblErroId: "lblErroNovoCnpj",
   normalizaDado: (x) => x,
   validador: validaNovoCNPJ,
 });

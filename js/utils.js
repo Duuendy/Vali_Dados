@@ -51,6 +51,7 @@ export function setupValidador({
   inputId,
   resultadoId,
   erroId,
+  lblErroId,
   normalizaDado,
   validador,
 }) {
@@ -58,6 +59,10 @@ export function setupValidador({
   const input = document.getElementById(inputId);
   const resultado = document.getElementById(resultadoId);
   const erro = document.getElementById(erroId);
+  const lblErro = document.getElementById(lblErroId);
+  if (lblErro) {
+    lblErro.hidden = true;
+  }
 
   if (!btn || !input || !resultado || !erro) {
     console.error(
@@ -72,13 +77,21 @@ export function setupValidador({
     if (campoVazio(dado)) {
       erro.textContent = "O campo não pode estar vazio.";
       resultado.textContent = "Inválido";
+      lblErro.hidden = false;
       return;
     }
 
     const validacao = normalizaDado(dado);
 
     const { valido, erros } = validador(validacao);
-    resultado.textContent = valido ? "Válido" : "Inválido";
-    erro.textContent = erros.join(" | "); //transforma array em string
+    resultado.textContent = `${dado} é ${valido ? "Válido" : "Inválido"}`;
+    input.value = "";
+    if (!valido) {
+      erro.textContent = erros.join(" | ");
+      lblErro.hidden = false; //transforma array em string
+    } else {
+      erro.textContent = "";
+      lblErro.hidden = true;
+    }
   });
 }
